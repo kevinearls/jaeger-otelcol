@@ -6,11 +6,11 @@ build: build-agent build-collector
 
 build-agent: otelcol-builder
 	@mkdir -p builds/agent
-	@$(OTELCOL_BUILDER) --config manifests/agent-manifest.yaml
+	@$(OTELCOL_BUILDER) --config manifests/agent.yaml
 
 build-collector: otelcol-builder
 	@mkdir -p builds/collector
-	@$(OTELCOL_BUILDER) --config manifests/collector-manifest.yaml
+	@$(OTELCOL_BUILDER) --config manifests/collector.yaml
 
 otelcol-builder:
 ifeq (, $(shell which opentelemetry-collector-builder))

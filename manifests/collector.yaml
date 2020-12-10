@@ -4,6 +4,6 @@ dist:
   description: Jaeger OpenTelemetry Collector Distribution
   version: 0.1.0
   otelcol_version: 0.13.0
-  include_core: false
+  include_core: true
   output_path: ./builds/collector/
 
