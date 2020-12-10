@@ -5,7 +5,7 @@ dist:
   version: 0.1.0
   otelcol_version: 0.13.0
   include_core: false
-  output_path: ./cmd/agent/_build
+  output_path: ./builds/agent/
 
 extensions:
   - import: go.opentelemetry.io/collector/extension/healthcheckextension

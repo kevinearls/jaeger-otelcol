@@ -1,0 +1,9 @@
+dist:
+  module: github.com/jaegertracing/jaeger-otel
+  name: jaeger-otel-collector
+  description: Jaeger OpenTelemetry Collector Distribution
+  version: 0.1.0
+  otelcol_version: 0.13.0
+  include_core: false
+  output_path: ./builds/collector/
+

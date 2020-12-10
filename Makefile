@@ -5,10 +5,12 @@ OTELCOL_BUILDER ?= $(OTELCOL_BUILDER_DIR)/opentelemetry-collector-builder
 build: build-agent build-collector
 
 build-agent: otelcol-builder
-	@$(OTELCOL_BUILDER) --config cmd/agent/agent-manifest.yaml
+	@mkdir -p builds/agent
+	@$(OTELCOL_BUILDER) --config manifests/agent-manifest.yaml
 
 build-collector: otelcol-builder
-	@$(OTELCOL_BUILDER) --config cmd/collector/collector-manifest.yaml
+	@mkdir -p builds/collector
+	@$(OTELCOL_BUILDER) --config manifests/collector-manifest.yaml
 
 otelcol-builder:
 ifeq (, $(shell which opentelemetry-collector-builder))
