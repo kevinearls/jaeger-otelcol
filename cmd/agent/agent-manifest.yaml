@@ -1,11 +1,11 @@
 dist:
   module: github.com/jaegertracing/jaeger-otel
-  name: jaeger-otel-collector
-  description: Jaeger OpenTelemetry Collector Distribution
+  name: jaeger-otel-agent
+  description: Jaeger OpenTelemetry Agent Distribution
   version: 0.1.0
   otelcol_version: 0.13.0
   include_core: false
-  output_path: ./collector/_build
+  output_path: ./cmd/agent/_build
 
 extensions:
   - import: go.opentelemetry.io/collector/extension/healthcheckextension
